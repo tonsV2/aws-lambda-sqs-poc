@@ -34,13 +34,13 @@ resource "aws_lambda_function" "event" {
   timeout = 30
 
   s3_bucket = "mn-lambda"
-  //s3_key = "mn/v1.0.0/lambda-1.0.0-all.jar"
-  s3_key = "nodejs/v1.0.0/main.zip"
+  s3_key = "mn/v1.0.0/lambda-1.0.0-all.jar"
+  //s3_key = "nodejs/v1.0.0/main.zip"
 
-  //handler = "dk.fitfit.handler.EventRequestHandler"
-  handler = "main.handler"
-  //runtime = "java11"
-  runtime = "nodejs12.x"
+  handler = "dk.fitfit.handler.EventRequestHandler"
+  //handler = "main.handler"
+  runtime = "java11"
+  //runtime = "nodejs12.x"
 
   memory_size = 512
 
